@@ -1,0 +1,41 @@
+{% extends "base.html" %} {% load static %} {% block body %}
+
+<section class="md:home flex flex-row-reverse md:flex-row flex-col-reverse justify-center items-center bg-white" id="home">
+  {% comment %} <div class="max-width">
+    <div class="home-content">
+      <div class="text-1" style="color: #352f44">Hello, my name is</div>
+      <div class="text-2">{{personalDetails.name}}</div>
+      <div class="text-3">And I'm a <span class="typing"></span></div>
+      <a href="#">Hire me</a>
+    </div>
+  </div> {% endcomment %}
+  <div class="pl-10 mt-10 text-4xl text-1" style="height:auto;">
+    <h1 class="text-gray-600 fnt md:text-6xl text-4xl" style="font-family:Quattrocento">Hello, my name is <span class="text-black font-bold">{{personalDetails.name}}</span></h1>
+    <div class="md:text-3xl text-2xl mt-6" style="font-family:Quattrocento">And I'm <span class="typing font-bold"></span></div>
+    {% comment %} <center> {% endcomment %}
+      <button class="mt-5 border p-2 border-gray-300 bg-black text-white text-xl rounded-md w-40 fnt">Hire me</button>
+    {% comment %} </center> {% endcomment %}
+  </div>
+  <img src={% static '/Assets/client_img/profile_img-removebg.png' %} alt=""class="home-img" style="width:auto;height:600px" />
+</section>
+
+<!-- about section start -->
+<section class="about bg-white" id="about">
+  <div class="max-width">
+    <h2 class="title">About me</h2>
+    <div class="about-content">
+      <div class="column left">
+        <img src={% static '/Assets/client_img/Sathak_whatsapp.jpeg' %} alt="" />
+      </div>
+      <div class="column right">
+        <div class="text">
+          I'm {{personalDetails.name}} and I'm <span class="typing-2"></span>
+        </div>
+        <p>{{personalDetails.about}}</p>
+        <a href={% static '/Assets/resume.pdf' %} download>Download CV</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock body %}

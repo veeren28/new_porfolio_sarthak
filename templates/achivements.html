@@ -1,0 +1,30 @@
+{%extends "base.html"%} {%load static %} {%block body %}
+<!-- about section start -->
+<section class="education bg-white" id="education">
+  <div class="max-width mt-10">
+      <h2 class="title">My achivements</h2>
+      <div class="education-content">
+          <div class="column left">
+              <div class="text" style="font-size:30px;">Achievements</div>
+                  {% for i in achivements %}
+                      <div class="flex flex-row gap-2">
+                          <p>○</p>
+                          <p>{{i.name}} - {{i.year}} - <span class="font-bold">{{i.location}}</span></p>
+                      </div>
+                  {% endfor %}
+              {% comment %} <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ratione error est recusandae consequatur, iusto illum deleniti quidem impedit, quos quaerat quis minima sequi. Cupiditate recusandae laudantium esse, harum animi aspernatur quisquam et delectus ipsum quam alias quaerat? Quasi hic quidem illum. Ad delectus natus aut hic explicabo minus quod.</p> {% endcomment %}
+              <center><a href="#" class="mb-10">Read more</a></center>
+          </div>
+          <div class="column right">
+            <img src={% static '/Assets/newimg2.jpeg' %} alt="" >        
+          </div> 
+  </div>
+  <div class="max-width mt-10 border h-40 grid grid-cols-2 gap-2">
+    <img class="rounded-md" src={% static '/fwd/1.jpg' %} alt="">
+    <img class="rounded-md" src={% static '/fwd/5.jpg' %} alt="">
+    <img class="rounded-md" src={% static '/fwd/2.jpg' %} alt="">
+    <img class="rounded-md" src={% static '/fwd/4.jpg' %} alt="">
+  </div>
+</section>
+
+{%endblock body%}

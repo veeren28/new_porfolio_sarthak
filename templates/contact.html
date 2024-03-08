@@ -1,0 +1,64 @@
+{% extends "base.html" %} {% load static %} {% block body %}
+<section class="contact bg-white" id="contact">
+  <div class="max-width">
+    <h2 class="title mt-10">Contact me</h2>
+    <div class="contact-content">
+      <div class="column left" style="align-items: center">
+        <div class="text">Get in Touch</div>
+        <p>
+          Please feel free to get in touch if you have any further questions.
+        </p>
+        <div class="icons">
+          <div class="row">
+            <i class="fas fa-user"></i>
+            <div class="info">
+              <div class="head">Name</div>
+              <div class="sub-title">{{contact.name}}</div>
+            </div>
+          </div>
+          <div class="row">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="info">
+              <div class="head">Address</div>
+              <div class="sub-title">{{contact.address}}</div>
+            </div>
+          </div>
+          <div class="row">
+            <i class="fas fa-envelope"></i>
+            <div class="info">
+              <div class="head">Email</div>
+              <div class="sub-title">{{contact.email}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <ul
+      class="flex md:flex-row item-center md:justify-evenly text-xl flex-col justify-center"
+    >
+      <li>
+        <a href="https://www.linkedin.com/in/sarthakpattnaik-law/"
+          ><!-- solid style -->
+          <i class="fa-brands fa-linkedin"></i>&nbsp;&nbsp;&nbsp;Linkedin</a
+        >
+      </li>
+      <li>
+        <a href="https://www.instagram.com/sarthakpattnaik1/"
+          ><i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;&nbsp;Instagram</a
+        >
+      </li>
+      <li>
+        <a href="https://twitter.com/AI_advocate"
+          ><i class="fa-brands fa-x-twitter"></i>&nbsp;&nbsp;&nbsp;Twitter</a
+        >
+      </li>
+      <li>
+        <a href="https://linktr.ee/nyaay?utm_source=linktree_profile_share"
+          ><i class="fa-solid fa-link"></i>&nbsp;&nbsp;&nbsp;linktree-NyaayAi</a
+        >
+      </li>
+    </ul>
+  </div>
+</section>
+{% endblock body %}

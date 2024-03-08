@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block body %}
+<section class="education bg-white" id="education">
+        <div class="max-width mt-10">
+            <h2 class="title">EDUCATION</h2>
+            <div class="education-content">
+                <div class="column left">
+                    <div class="text" style="font-size: 35px; font-weight:700">Education</div>
+                        {% for i in Education %}
+                            <div class="flex flex-row gap-2">
+                                <p>○</p>
+                                <p>{{i.name}} - {{i.year}} - {{i.location}}</p>
+                            </div>
+                        {% endfor %}
+                    {% comment %} <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ratione error est recusandae consequatur, iusto illum deleniti quidem impedit, quos quaerat quis minima sequi. Cupiditate recusandae laudantium esse, harum animi aspernatur quisquam et delectus ipsum quam alias quaerat? Quasi hic quidem illum. Ad delectus natus aut hic explicabo minus quod.</p> {% endcomment %}
+                    <center><a href="#" class="mb-10">Read more</a></center>
+                </div>
+                <div class="column right">
+                  <img src={% static '/Assets/newimg2.jpeg' %} alt="" >        
+                </div> 
+        </div>
+    </section>
+   <!--  experience section start  -->
+     <section class="experience bg-white" id="experience">
+        <div class="max-width">
+            <h2 class="title uppercase">experiences</h2>
+            <div class="experience-content">
+                <div class="column left">
+                    <div class="text uppercase">My  experiences.</div>
+                    {% for i in Experiences %}
+                        <div class="flex flex-col gap-1">
+                            <div class="flex flex-row gap-2">
+                                <p>○</p>
+                                <p>{{i.name}} - <span class="text-gray-500">{{i.designation}}</span> </p>
+                            </div>
+                            <h1 class="text-right font-bold">- &nbsp;  {{i.timePeriod}}</h1>
+                       </div>
+                    {% endfor %}
+                    {% comment %} <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ratione error est recusandae consequatur, iusto illum deleniti quidem impedit, quos quaerat quis minima sequi. Cupiditate recusandae laudantium esse, harum animi aspernatur quisquam et delectus ipsum quam alias quaerat? Quasi hic quidem illum. Ad delectus natus aut hic explicabo minus quod.</p> {% endcomment %}
+                    <center>
+                        <a href="#" class="mb-10">Read more</a>
+                    </center>
+                </div>
+                <div class="right">
+                    <img src={% static '/Assets/client_img/Sarthak_stem.jpg' %} alt="">
+        </div>
+    </section>
+{% endblock body %}
